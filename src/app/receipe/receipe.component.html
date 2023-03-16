@@ -1,0 +1,21 @@
+<div class="container">
+  <table class="table">
+    <thead>
+
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Receipe</th>
+        <th scope="col">ingredients</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data; let i = index;">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{item.receipe}}</td>
+        <td>{{item.ingredients}}</td>
+        <td>{{item.Description}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

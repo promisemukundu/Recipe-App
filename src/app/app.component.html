@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>NORA RECEIPE BOOK</h1>
+  <br />
+  <h2>Receipe Name</h2>
+
+  <form #receipeForm="ngForm" (ngSubmit)="onAddReceipe(receipeForm)">
+    <div class="form-floating">
+      <textarea class="form-control" ngModel name="receipe" placeholder="Leave a comment here" id="floatingTextarea2"
+        style="height: 100px"></textarea>
+      <label for="floatingTextarea2">Receipe Name</label>
+    </div>
+    <br />
+    <h2>Ingredients</h2>
+    <div class="form-floating">
+      <textarea class="form-control" ngModel name="ingredients" placeholder="Leave a comment here"
+        id="floatingTextarea2" style="height: 100px"></textarea>
+      <label for="floatingTextarea2">Ingredients</label>
+    </div>
+    <br />
+    <h2>Description</h2>
+    <div class="form-floating">
+      <textarea class="form-control" name="Description" ngModel placeholder="Leave a comment here"
+        id="floatingTextarea2" style="height: 100px"></textarea>
+      <label for="floatingTextarea2">Description</label>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Add Receipe</button>
+  </form>
+</div>
+<br><br>
+<app-receipe [data]='recipeList'></app-receipe>
